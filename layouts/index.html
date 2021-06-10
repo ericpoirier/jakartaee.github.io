@@ -21,7 +21,8 @@
     }
   </style>
 {{ end }}
-
+{{ block "main_prefix" . }}{{ partial "main_prefix.html" . }}{{ end }}
 {{ define "main" }}
  {{ .Content }}
 {{ end }}
+{{ block "main_suffix" . }}{{ partial "main_suffix.html" . }}{{ end }}
